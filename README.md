@@ -3,7 +3,7 @@
 ## Usage:
 1. Download Conf: 
 ```
-curl https://cdn.jsdelivr.net/gh/dunmengjun/Smartdns-GFWList/smartdns_gfw_domain.conf > /etc/smartdns/smartdns_gfw_domain.conf
+curl https://raw.githubusercontent.com/dunmengjun/SmartDNS-GFWList/master/smartdns_gfw_domain.conf > /etc/smartdns/smartdns_gfw_domain.conf
 ```
 
 2. Add it to your smartdns configuration:
