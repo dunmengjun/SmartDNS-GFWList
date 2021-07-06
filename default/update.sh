@@ -17,6 +17,8 @@ cat /tmp/temp_gfwlist1 /tmp/temp_gfwlist2 /tmp/temp_gfwlist3 default/extra.conf 
 
 cat /tmp/temp_gfwlist | sed 's/^/\./g' > /tmp/smartdns_gfw_domain.conf
 
+cat /tmp/smartdns_gfw_domain.conf | sed -i 's/^/ipset \//' | sed -i 's/$/\/gfwlist/' > smartdns_gfw_ipset.conf
+
 sed -i 's/^/nameserver \//' /tmp/smartdns_gfw_domain.conf
 sed -i 's/$/\/GFW/' /tmp/smartdns_gfw_domain.conf
 cat default/gfw_group.conf /tmp/smartdns_gfw_domain.conf > smartdns_gfw_domain.conf
