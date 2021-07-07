@@ -10,7 +10,7 @@ curl -sS https://raw.githubusercontent.com/hq450/fancyss/master/rules/gfwlist.co
 
 curl -sS https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt > /tmp/temp_gfwlist3
 
-curl -sS https://anti-ad-for-smartdns.conf | \
+curl -sS https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-smartdns.conf | \
     sed '/activity.windows.com/d' > smartdns_anti_ad.conf
 
 cat /tmp/temp_gfwlist1 /tmp/temp_gfwlist2 /tmp/temp_gfwlist3 default/extra.conf | \
