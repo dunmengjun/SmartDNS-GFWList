@@ -17,7 +17,7 @@ cat /tmp/temp_gfwlist1 /tmp/temp_gfwlist2 /tmp/temp_gfwlist3 default/extra.conf 
 
 cat /tmp/temp_gfwlist | sed 's/^/\./g' > /tmp/smartdns_gfw_domain.conf
 
-sed -e '/activity.windows.com/d' /tmp/smartdns_anti_ad.conf > smartdns_anti_ad.conf
+cat /tmp/smartdns_anti_ad.conf | sed 's/activity.windows.com/d' > smartdns_anti_ad.conf
 
 cat /tmp/smartdns_gfw_domain.conf | sed 's/^/ipset \//g' | sed 's/$/\/ss_spec_dst_fw/g' > smartdns_gfw_ipset.conf
 
